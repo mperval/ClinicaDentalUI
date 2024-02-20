@@ -45,7 +45,7 @@ class ProductController extends Controller
     {
         // Validar los datos de entrada
     $request->validate([
-        'nombre' => 'required|alpha', // Debe ser obligatorio (required) y contener solo caracteres alfabéticos (alpha).
+        'nombre' => 'required', // Debe ser obligatorio (required) y contener solo caracteres alfabéticos (alpha).
         'descripcion' => 'required',//Debe ser obligatorio.
         'precio' => 'required|numeric',//Debe ser obligatorio y numérico.
         'stock' => 'required|integer', //Debe ser obligatorio y un número entero.
