@@ -18,19 +18,12 @@
         align-content: center;
     }
 
-    .card {
-        height: 370px;
-        width: 400px;
-        background-color: rgba(0, 0, 0, 0.5) !important;
-        position: absolute;
-        transform: translate(110%, 30%);
-
-    }
+   
 
     .social_icon span {
         font-size: 60px;
         margin-left: 10px;
-        color: #FFC312;
+        color: rgb(21, 228, 208);
     }
 
     .social_icon span:hover {
@@ -46,12 +39,12 @@
         position: absolute;
         right: 20px;
         top: -27px;
-        color: #FFC312;
+        color: rgb(21, 228, 208);
     }
 
     .input-group-prepend span {
         width: 50px;
-        background-color: #FFC312;
+        background-color: rgb(21, 228, 208);
         color: black;
         border: 0 !important;
     }
@@ -75,7 +68,7 @@
 
     .login_btn {
         color: black;
-        background-color: #FFC312;
+        background-color: rgb(21, 228, 208);
         width: 100px;
     }
 
@@ -93,7 +86,7 @@
     }
 
     #btn_login {
-        background-color: #ffc312;
+        background-color: rgb(21, 228, 208);
         color: black;
         border: 1px solid transparent;
         border-radius: 0.25rem;
@@ -109,6 +102,24 @@
 
     .navbar {
         display: none;
+    }
+    
+    .card {
+        height: 370px;
+        width: 400px;
+        top: 150px;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        position: absolute;
+        transform: translate(110%, 30%);
+
+    }
+    .company_icon {
+        position: absolute;
+        top: -360px;
+        left: -80px;
+        z-index: -2000; /* Asegura que el icono esté por encima del card */
+        width: 550px; /* Ajusta el tamaño según sea necesario */
+        height: 450px; /* Ajusta el tamaño según sea necesario */
     }
 </style>
 
@@ -134,6 +145,7 @@
                 </div>
 
                 <div class="card-body">
+                <img src="{{ asset('images/iconoPrincipal.png') }}" alt="Company Logo" class="company_icon">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
