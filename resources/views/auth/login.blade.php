@@ -46,6 +46,7 @@
         position: absolute;
         right: 20px;
         top: -27px;
+        color: #FFC312;
     }
 
     .input-group-prepend span {
