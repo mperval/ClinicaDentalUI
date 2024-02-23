@@ -26,4 +26,7 @@
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
     </div>
+    <div class="text-center">
+        <a class="btn btn-primary" href="{{ route('products.index') }}"> {{ __('Back') }}</a>
+    </div>
 </div>

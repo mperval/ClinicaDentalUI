@@ -1,17 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.navbar2')
 
 @section('template_title')
-{{ $product->name ?? "{{ __('Show') Product" }}
+    {{ $product->name ?? __("Show Product") }}
 @endsection
 
 @section('content')
+
 <section class="content container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <div class="float-left">
-                        <span class="card-title">{{ __('Show') }} Product</span>
+                        <span class="card-title">{{ __('Visualizar') }} Product</span>
                     </div>
                 </div>
 
@@ -38,8 +39,8 @@
             </div>
         </div>
     </div>
-    <div class="text-center">
-        <a class="btn btn-primary" href="{{ route('home') }}"> {{ __('Back') }}</a>
-    </div>
 </section>
+<div class="text-center">
+        <a class="btn btn-primary" href="{{ route('products.index') }}"> {{ __('Back') }}</a>
+    </div>
 @endsection

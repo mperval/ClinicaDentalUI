@@ -13,56 +13,77 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="../css/style.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="../css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="../images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- owl stylesheets --> 
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="../css/owl.carousel.min.css">
+      <link rel="stylesheet" href="../css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body>
       <!-- header section start -->
       <div class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo"><a href="index.html"><img src="../images/logo.png"></a></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="health.html">Health</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="medicine.html">Medicine</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="news.html">News</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link active" href="client.html">Client</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url('home') }}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('principal/health') }}">Salud</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('principal/medicine') }}">Medicina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('principal/news') }}">Nuevo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('principal/contact') }}">Contactos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administración
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ route('products.index') }}">{{ __('Productos') }}</a>
+                    </div>
+                </li>
+                <!--boton cuenta-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cuenta
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ url('principal/client') }}">Mi perfil</a>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                            {{ __('Cerrar Sesión') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="../images/search-icon.png"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
       </div>
       <!-- header section end -->
       <!-- client section start -->
@@ -75,12 +96,12 @@
                      <p class="client_text">It is a long established fact that a reader will be distracted </p>
                      <div class="client_section_2">
                         <div class="client_left">
-                           <div><img src="images/client-img.png" class="client_img"></div>
+                           <div><img src="../images/client-img.png" class="client_img"></div>
                         </div>
                         <div class="client_right">
                            <h3 class="distracted_text">Distracted by</h3>
                            <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                           <div class="quote_icon"><img src="images/quote-icon.png"></div>
+                           <div class="quote_icon"><img src="../images/quote-icon.png"></div>
                         </div>
                      </div>
                   </div>
@@ -91,12 +112,12 @@
                      <p class="client_text">It is a long established fact that a reader will be distracted </p>
                      <div class="client_section_2">
                         <div class="client_left">
-                           <div><img src="images/client-img.png" class="client_img"></div>
+                           <div><img src="../images/client-img.png" class="client_img"></div>
                         </div>
                         <div class="client_right">
                            <h3 class="distracted_text">Distracted by</h3>
                            <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                           <div class="quote_icon"><img src="images/quote-icon.png"></div>
+                           <div class="quote_icon"><img src="../images/quote-icon.png"></div>
                         </div>
                      </div>
                   </div>
@@ -107,12 +128,12 @@
                      <p class="client_text">It is a long established fact that a reader will be distracted </p>
                      <div class="client_section_2">
                         <div class="client_left">
-                           <div><img src="images/client-img.png" class="client_img"></div>
+                           <div><img src="../images/client-img.png" class="client_img"></div>
                         </div>
                         <div class="client_right">
                            <h3 class="distracted_text">Distracted by</h3>
                            <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                           <div class="quote_icon"><img src="images/quote-icon.png"></div>
+                           <div class="quote_icon"><img src="../images/quote-icon.png"></div>
                         </div>
                      </div>
                   </div>
@@ -134,9 +155,9 @@
                <div class="col-lg-3 col-sm-6">
                   <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
                   <h1 class="adderss_text">Contact Us</h1>
-                  <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
-                  <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
-                  <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
+                  <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
+                  <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
+                  <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
                </div>
                <div class="col-lg-3 col-sm-6">
                   <h1 class="adderss_text">Doctors</h1>
@@ -152,10 +173,10 @@
                   <div class="subscribe_bt"><a href="#">Subscribe</a></div>
                   <div class="social_icon">
                      <ul>
-                        <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                        <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                        <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-                        <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                        <li><a href="#"><img src="../images/fb-icon.png"></a></li>
+                        <li><a href="#"><img src="../images/twitter-icon.png"></a></li>
+                        <li><a href="#"><img src="../images/linkedin-icon.png"></a></li>
+                        <li><a href="#"><img src="../images/instagram-icon.png"></a></li>
                      </ul>
                   </div>
                </div>
@@ -171,16 +192,16 @@
       </div>
       <!-- copyright section end -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/popper.min.js"></script>
+      <script src="../js/bootstrap.bundle.min.js"></script>
+      <script src="../js/jquery-3.0.0.min.js"></script>
+      <script src="../js/plugin.js"></script>
       <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../js/custom.js"></script>
       <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
+      <script src="../js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    </body>
 </html>

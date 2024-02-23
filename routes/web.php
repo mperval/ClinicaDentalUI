@@ -21,6 +21,7 @@ use App\Http\Controllers\ProductController;
 Route::redirect('/', '/login');
 
 Route::resource('products', ProductController::class);
+Route::resource('products.index', ProductController::class);
 
 Route::get('/principal/health', function () {
     return view('principal.health');
