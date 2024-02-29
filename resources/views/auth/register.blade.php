@@ -21,6 +21,7 @@
     .card {
         height: 370px;
         width: 400px;
+        top: 100px;
         background-color: rgba(0, 0, 0, 0.5) !important;
         position: absolute;
         transform: translate(110%, 30%);
@@ -30,7 +31,7 @@
     .social_icon span {
         font-size: 60px;
         margin-left: 10px;
-        color: #FFC312;
+        color: rgb(21, 228, 208);
     }
 
     .social_icon span:hover {
@@ -46,11 +47,12 @@
         position: absolute;
         right: 20px;
         top: -27px;
+        color: rgb(21, 228, 208);
     }
 
     .input-group-prepend span {
         width: 50px;
-        background-color: #FFC312;
+        background-color: rgb(21, 228, 208);
         color: black;
         border: 0 !important;
     }
@@ -74,7 +76,7 @@
 
     .login_btn {
         color: black;
-        background-color: #FFC312;
+        background-color: rgb(21, 228, 208);
         width: 100px;
     }
 
@@ -92,31 +94,48 @@
     }
 
     #btn_register {
-        background-color: #ffc312;
+        background-color: rgb(21, 228, 208);
         color: black;
         border: 1px solid transparent;
         border-radius: 0.25rem;
         padding: 0.375rem 0.75rem;
         font-size: 1rem;
         line-height: 1.5;
-        
+
     }
 
     #btn_register:hover {
         background-color: white;
     }
 
+    #rol1{
+        color: white;
+        font-size: 20px;
+    }
+    #is_admin{
+        margin-top: 40px;
+        margin-left: -100px;
+    }
     .navbar {
         display: none;
     }
 
+    .company_icon {
+        position: absolute;
+        top: -360px;
+        left: -80px;
+        z-index: -2000;
+        /* Asegura que el icono esté por encima del card */
+        width: 550px;
+        /* Ajusta el tamaño según sea necesario */
+        height: 450px;
+        /* Ajusta el tamaño según sea necesario */
+    }
 </style>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
 @section('content')
@@ -137,6 +156,7 @@
                 </div>
 
                 <div class="card-body">
+                    <img src="{{ asset('images/iconoPrincipal.png') }}" alt="Company Logo" class="company_icon">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -144,9 +164,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input id="name" type="text" placeholder="Nombre de Usuario"
-                                class="form-control @error('name') is-invalid @enderror" name="name"
-                                value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            <input id="name" type="text" placeholder="Nombre de Usuario" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
 
                             @error('name')
@@ -160,9 +178,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             </div>
-                            <input id="email" placeholder="Correo Electrónico" type="email"
-                                class="form-control @error('email') is-invalid @enderror" name="email"
-                                value="{{ old('email') }}" required autocomplete="email">
+                            <input id="email" placeholder="Correo Electrónico" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
 
                             @error('email')
@@ -176,9 +192,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input id="password" placeholder="Contraseña" type="password"
-                                class="form-control @error('password') is-invalid @enderror" name="password" required
-                                autocomplete="new-password">
+                            <input id="password" placeholder="Contraseña" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -191,8 +205,12 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input id="password-confirm" placeholder="Confirmar contraseña" type="password"
-                                class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            <input id="password-confirm" placeholder="Confirmar contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                        </div>
+                        <!-- ROL -->
+                        <div class="form-group form-check">
+                            <label id="rol1" for="is_admin" class="form-check-label">¿Eres administrador?</label>
+                            <input type="checkbox" id="is_admin" name="is_admin" class="form-check-input">
                         </div>
                 </div>
 
@@ -206,7 +224,7 @@
 
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                       ¿Ya tienes una Cuenta?<a href="{{route('login')}}">Iniciar Sesión</a>
+                        ¿Ya tienes una Cuenta?<a href="{{route('login')}}">Iniciar Sesión</a>
                     </div>
                 </div>
                 </form>

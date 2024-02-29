@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.navbar2')
 
 @section('template_title')
     {{ __('Create') }} Product
