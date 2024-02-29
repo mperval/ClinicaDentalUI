@@ -76,7 +76,7 @@
 
     .login_btn {
         color: black;
-        background-color:rgb(21, 228, 208);
+        background-color: rgb(21, 228, 208);
         width: 100px;
     }
 
@@ -101,7 +101,7 @@
         padding: 0.375rem 0.75rem;
         font-size: 1rem;
         line-height: 1.5;
-        
+
     }
 
     #btn_register:hover {
@@ -111,22 +111,23 @@
     .navbar {
         display: none;
     }
+
     .company_icon {
         position: absolute;
         top: -360px;
         left: -80px;
-        z-index: -2000; /* Asegura que el icono esté por encima del card */
-        width: 550px; /* Ajusta el tamaño según sea necesario */
-        height: 450px; /* Ajusta el tamaño según sea necesario */
+        z-index: -2000;
+        /* Asegura que el icono esté por encima del card */
+        width: 550px;
+        /* Ajusta el tamaño según sea necesario */
+        height: 450px;
+        /* Ajusta el tamaño según sea necesario */
     }
-
 </style>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
 @section('content')
@@ -147,7 +148,7 @@
                 </div>
 
                 <div class="card-body">
-                <img src="{{ asset('images/iconoPrincipal.png') }}" alt="Company Logo" class="company_icon">
+                    <img src="{{ asset('images/iconoPrincipal.png') }}" alt="Company Logo" class="company_icon">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -155,9 +156,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input id="name" type="text" placeholder="Nombre de Usuario"
-                                class="form-control @error('name') is-invalid @enderror" name="name"
-                                value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            <input id="name" type="text" placeholder="Nombre de Usuario" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
 
                             @error('name')
@@ -171,9 +170,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             </div>
-                            <input id="email" placeholder="Correo Electrónico" type="email"
-                                class="form-control @error('email') is-invalid @enderror" name="email"
-                                value="{{ old('email') }}" required autocomplete="email">
+                            <input id="email" placeholder="Correo Electrónico" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
 
                             @error('email')
@@ -187,9 +184,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input id="password" placeholder="Contraseña" type="password"
-                                class="form-control @error('password') is-invalid @enderror" name="password" required
-                                autocomplete="new-password">
+                            <input id="password" placeholder="Contraseña" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -202,8 +197,15 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input id="password-confirm" placeholder="Confirmar contraseña" type="password"
-                                class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            <input id="password-confirm" placeholder="Confirmar contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                        </div>
+                        <!-- ROL -->
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-check"></i></span>
+                            </div>
+                            <input type="checkbox" id="is_admin" name="is_admin" class="form-check-input">
+                            <label for="is_admin" class="form-check-label">¿Es administrador?</label>
                         </div>
                 </div>
 
@@ -217,7 +219,7 @@
 
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                       ¿Ya tienes una Cuenta?<a href="{{route('login')}}">Iniciar Sesión</a>
+                        ¿Ya tienes una Cuenta?<a href="{{route('login')}}">Iniciar Sesión</a>
                     </div>
                 </div>
                 </form>
