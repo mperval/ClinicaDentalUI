@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\MerchandisingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,16 @@ use App\Http\Controllers\ProductController;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-
+// iniciar de primera el Login
 Route::redirect('/', '/login');
 
+//Primer modelo.
 Route::resource('products', ProductController::class);
 Route::resource('products.index', ProductController::class);
+
+//segundo modelo
+Route::resource('merchandisings', MerchandisingController::class);
+Route::resource('merchandisings.index', MerchandisingController::class);
 
 Route::get('/principal/health', function () {
     return view('principal.health');
