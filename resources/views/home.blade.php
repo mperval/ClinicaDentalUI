@@ -22,10 +22,11 @@
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<!-- owl stylesheets -->
+   <!-- owl stylesheets -->
    <link rel="stylesheet" href="css/owl.carousel.min.css">
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
 </head>
 
 <body>
@@ -33,7 +34,8 @@
    <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,8 +55,9 @@
                <li class="nav-item">
                   <a class="nav-link" href="{{ url('/principal/contact') }}">Contactos</a>
                </li>
-               <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <li class="nav-item dropdown" id="admin" style="display: none;">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Admin
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -63,7 +66,8 @@
                </li>
                <!--boton cuenta-->
                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Cuenta
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -158,7 +162,8 @@
    <div class="health_section layout_padding">
       <div class="container">
          <h1 class="health_taital">Best Of Health care for you</h1>
-         <p class="health_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+         <p class="health_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
          <div class="health_section layout_padding">
             <div class="row">
                <div class="col-sm-7">
@@ -193,7 +198,8 @@
          <div class="knowledge_main">
             <div class="left_main">
                <h1 class="knowledge_taital">Knowledge of center</h1>
-               <p class="knowledge_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+               <p class="knowledge_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
             <div class="right_main">
                <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
@@ -281,7 +287,9 @@
                      </div>
                      <div class="client_right">
                         <h3 class="distracted_text">Distracted by</h3>
-                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the
+                           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                           it has a more-or-less normal distribution of letters</p>
                         <div class="quote_icon"><img src="images/quote-icon.png"></div>
                      </div>
                   </div>
@@ -297,7 +305,9 @@
                      </div>
                      <div class="client_right">
                         <h3 class="distracted_text">Distracted by</h3>
-                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the
+                           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                           it has a more-or-less normal distribution of letters</p>
                         <div class="quote_icon"><img src="images/quote-icon.png"></div>
                      </div>
                   </div>
@@ -313,7 +323,9 @@
                      </div>
                      <div class="client_right">
                         <h3 class="distracted_text">Distracted by</h3>
-                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <p class="lorem_text">It is a long established fact that a reader will be distracted by the
+                           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                           it has a more-or-less normal distribution of letters</p>
                         <div class="quote_icon"><img src="images/quote-icon.png"></div>
                      </div>
                   </div>
@@ -336,17 +348,22 @@
             <div class="col-lg-3 col-sm-6">
                <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
                <h1 class="adderss_text">Contact Us</h1>
-               <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
-               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
-               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
+               <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Page when looking at
+                     its</span></div>
+               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+7586656566</span>
+               </div>
+               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span>
+               </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                <h1 class="adderss_text">Doctors</h1>
-               <div class="hiphop_text_1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</div>
+               <div class="hiphop_text_1">There are many variations of passages of Lorem Ipsum available, but the
+                  majority have suffered alteration in some form, by injected humour,</div>
             </div>
             <div class="col-lg-3 col-sm-6">
                <h1 class="adderss_text">Useful Links</h1>
-               <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered ,</div>
+               <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority
+                  have suffered ,</div>
             </div>
             <div class="col-lg-3 col-sm-6">
                <h1 class="adderss_text">Newsletter</h1>
@@ -368,7 +385,8 @@
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <p class="copyright_text">2019 All Rights Reserved. Design by <a href="https://html.design">Free html Templates</a></p>
+         <p class="copyright_text">2019 All Rights Reserved. Design by <a href="https://html.design">Free html
+               Templates</a></p>
       </div>
    </div>
    <!-- copyright section end -->
@@ -384,4 +402,25 @@
    <!-- javascript -->
    <script src="js/owl.carousel.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var checkbox = document.getElementById('is_admin');
+        var adminOption = document.getElementById('admin');
+
+        checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+                adminOption.style.display = 'block';
+            } else {
+                adminOption.style.display = 'none';
+            }
+        });
+
+        // Verificar el estado inicial del checkbox
+        if (checkbox.checked) {
+            adminOption.style.display = 'block';
+        } else {
+            adminOption.style.display = 'none';
+        }
+    });
+</script>
 </body>

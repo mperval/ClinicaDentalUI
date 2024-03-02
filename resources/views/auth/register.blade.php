@@ -112,10 +112,11 @@
         color: white;
         font-size: 20px;
     }
+
     #is_admin{
-        margin-top: 40px;
-        margin-left: -100px;
+        margin-left: -209px;
     }
+
     .navbar {
         display: none;
     }
@@ -208,9 +209,9 @@
                             <input id="password-confirm" placeholder="Confirmar contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
                         <!-- ROL -->
-                        <div class="form-group form-check">
-                            <label id="rol1" for="is_admin" class="form-check-label">¿Eres administrador?</label>
-                            <input type="checkbox" id="is_admin" name="is_admin" class="form-check-input">
+                        <div class="form-group form-check" style="margin-left: 8px">
+                            <label id="rol1" for="is_admin" class="form-check-label">¿Eres administrador?
+                            <input type="checkbox" id="is_admin" name="is_admin" class="form-check-input"> </label>
                         </div>
                 </div>
 
