@@ -207,11 +207,6 @@
                             </div>
                             <input id="password-confirm" placeholder="Confirmar contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
-                        <!-- ROL -->
-                        <div class="form-group form-check">
-                            <label id="rol1" for="is_admin" class="form-check-label">¿Eres administrador?</label>
-                            <input type="checkbox" id="is_admin" name="is_admin" class="form-check-input">
-                        </div>
                 </div>
 
                 <div class="form-group">
