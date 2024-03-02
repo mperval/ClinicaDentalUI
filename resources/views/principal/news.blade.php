@@ -32,7 +32,7 @@
       <div class="header_section">
       <div class="header_section">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="logo"><a href="index.html"><img src="../images/logo.png"></a></div>
+    <div class="logo" style = "display: block; text-align: center; margin-left: -160px;"><a href="index.html"  ><img src="../images/iconoPrincipal.png" style="width: 150px "><h1 style =" color: #3ba9d7;">Clínica Carrillo</h1></a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -98,25 +98,25 @@
                <div class="row">
                   <div class="col-lg-4 col-sm-6">
                      <div class="box_main">
-                        <div class="icon_1"><img src="images/icon-2.png"></div>
+                        <div class="icon_1"><img src="../images/icon-2.png"></div>
                         <h4 class="daily_text">Daily care experts</h4>
                      </div>
                   </div>
                   <div class="col-lg-4 col-sm-6">
                      <div class="box_main active">
-                        <div class="icon_1"><img src="images/icon-3.png"></div>
+                        <div class="icon_1"><img src="../images/icon-3.png"></div>
                         <h4 class="daily_text_1">Available 24/7</h4>
                      </div>
                   </div>
                   <div class="col-lg-4 col-sm-6">
                      <div class="box_main">
-                        <div class="icon_1"><img src="images/icon-4.png"></div>
+                        <div class="icon_1"><img src="../images/icon-4.png"></div>
                         <h4 class="daily_text_1">Balanced care</h4>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="getquote_bt"><a href="#">Get A Quote <span><img src="images/right-arrow.png"></span></a></div>
+            <div class="getquote_bt"><a href="#">Get A Quote <span><img src="../images/right-arrow.png"></span></a></div>
          </div>
       </div>
       <!-- news section end -->
@@ -125,11 +125,11 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-3 col-sm-6">
-                  <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+                  <div class="footer_logo"><a href="index.html"><img src="../images/footer-logo.png"></a></div>
                   <h1 class="adderss_text">Contact Us</h1>
-                  <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
-                  <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
-                  <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
+                  <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
+                  <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
+                  <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
                </div>
                <div class="col-lg-3 col-sm-6">
                   <h1 class="adderss_text">Doctors</h1>
