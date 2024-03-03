@@ -51,7 +51,7 @@
                   <a class="nav-link" href="{{ url('/principal/news') }}">Nuevo</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/principal/contact') }}">Contactos</a>
+                  <a class="nav-link" href="{{ url('/principal/contact') }}">Servicios</a>
                </li>
 
                <!-- menu admin -->
@@ -99,9 +99,9 @@
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Health <br><span style="color: #151515;">Care</span></h1>
-                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <p class="banner_text">¡Bienvenidos a la Clínica Dental Carrillo!</p>
                            <div class="btn_main">
-                              <div class="more_bt"><a href="#">Contact Now</a></div>
+                              <div class="more_bt"><a href="{{ url('/principal/contact') }}">Contáctanos</a></div>
                               <div class="contact_bt"><a href="#">Get A Quote</a></div>
                            </div>
                         </div>
@@ -118,9 +118,9 @@
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Health <br><span style="color: #151515;">Care</span></h1>
-                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <p class="banner_text">En Nuestra clínica podrá observar los distintos servicios que tenemos a su disposición</p>
                            <div class="btn_main">
-                              <div class="more_bt"><a href="#">Contact Now</a></div>
+                           <div class="more_bt"><a href="{{ url('/principal/contact') }}">Contáctanos</a></div>
                               <div class="contact_bt"><a href="#">Get A Quote</a></div>
                            </div>
                         </div>
@@ -137,9 +137,9 @@
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Health <br><span style="color: #151515;">Care</span></h1>
-                           <p class="banner_text">There are many variations of passages of Lorem Ipsum</p>
+                           <p class="banner_text">Tenemos varios tratamientos a elegir como por ejemplo: implantología,  ortodoncia, estética dental, prótesis, etc... </p>
                            <div class="btn_main">
-                              <div class="more_bt"><a href="#">Contact Now</a></div>
+                           <div class="more_bt"><a href="{{ url('/principal/contact') }}">Contáctanos</a></div>
                               <div class="contact_bt"><a href="#">Get A Quote</a></div>
                            </div>
                         </div>
@@ -163,8 +163,8 @@
    <!-- health section start -->
    <div class="health_section layout_padding">
       <div class="container">
-         <h1 class="health_taital">Best Of Health care for you</h1>
-         <p class="health_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+         <h1 class="health_taital">Los mejores cuidados para sus dientes</h1>
+         <p class="health_text">Damos la bienvenida a nuestros pacientes a un ambiente relajado y respetuoso, donde podrán recibir una atención integral de calidad por parte de nuestro equipo altamente capacitado.</p>
          <div class="health_section layout_padding">
             <div class="row">
                <div class="col-sm-7">
@@ -188,7 +188,7 @@
                   </div>
                </div>
             </div>
-            <div class="getquote_bt_1"><a href="#">Read More <span><img src="images/right-arrow.png"></span></a></div>
+            <div class="getquote_bt_1"><a href="#">Leer más<span><img src="images/right-arrow.png"></span></a></div>
          </div>
       </div>
    </div>
@@ -198,8 +198,8 @@
       <div class="container">
          <div class="knowledge_main">
             <div class="left_main">
-               <h1 class="knowledge_taital">Knowledge of center</h1>
-               <p class="knowledge_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+               <h1 class="knowledge_taital">Sobre nosotros</h1>
+               <p class="knowledge_text">Somos la clínica dental de referencia, con un equipo humano dirigido por los mejores profesionales del sector. Con amplias y modernas instalaciones, dotadas de las últimas tecnologías que nos permitan ofrecer el mejor cuidado para una salud bucodental de calidad. Nuestra apuesta por la innovación nos ha hecho incorporar tratamientos muy novedosos como el uso de Plasma Rico en Plaquetas, un tratamiento fundamental para la cicatrización y regeneración de tejidos.</p>
             </div>
             <div class="right_main">
                <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
@@ -211,26 +211,26 @@
    <!-- news section start -->
    <div class="news_section layout_padding">
       <div class="container">
-         <h1 class="health_taital">Why choose 24hr home care</h1>
-         <p class="health_text">labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+         <h1 class="health_taital">¿Por qué elegir Clínica Carrillo?</h1>
+         <p class="health_text">Trabajar y sufrir dolor, gran cosa. Porque por el trabajo duro se obtiene algo grande. Para alcanzar una vida mínimamente satisfactoria.</p>
          <div class="news_section_2 layout_padding">
             <div class="row">
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main">
                      <div class="icon_1"><img src="images/icon-2.png"></div>
-                     <h4 class="daily_text">Daily care experts</h4>
+                     <h4 class="daily_text">Certificados Médicos</h4>
                   </div>
                </div>
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main active">
                      <div class="icon_1"><img src="images/icon-3.png"></div>
-                     <h4 class="daily_text_1">Available 24/7</h4>
+                     <h4 class="daily_text_1">Lunes a Viernes con Horario adaptable</h4>
                   </div>
                </div>
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main">
-                     <div class="icon_1"><img src="images/icon-4.png"></div>
-                     <h4 class="daily_text_1">Balanced care</h4>
+                     <div class="icon_1"><img src="images/ic_botiquin.png" style="width: 150px;"></div>
+                     <h4 class="daily_text_1">Tratamientos</h4>
                   </div>
                </div>
             </div>
@@ -242,30 +242,34 @@
    <!-- contact section start -->
    <div class="contact_section layout_padding">
       <div class="container">
-         <h1 class="contact_taital">What we do</h1>
+         <h1 class="contact_taital">Nuestros tratamientos</h1>
          <div class="news_section_2">
             <div class="row">
                <div class="col-md-6">
                   <div class="icon_main">
-                     <div class="icon_7"><img src="images/icon-7.png"></div>
-                     <h4 class="diabetes_text">Diabetes and obesity Counselling </h4>
+                     <div class="icon_7"><img src="images/impla-1.png" style="width: 69px;"></div>
+                     <h4 class="diabetes_text">Implantología </h4>
                   </div>
                   <div class="icon_main">
-                     <div class="icon_7"><img src="images/icon-5.png"></div>
-                     <h4 class="diabetes_text">Obstetrics and Gynsecology</h4>
+                     <div class="icon_7"><img src="images/impla-2.png" style="width: 69px;"></div>
+                     <h4 class="diabetes_text">Ortodoncia</h4>
                   </div>
                   <div class="icon_main">
-                     <div class="icon_7"><img src="images/icon-6.png"></div>
-                     <h4 class="diabetes_text">Surgical and medical Oncology</h4>
+                     <div class="icon_7"><img src="images/impla-3.png" style="width: 69px;"></div>
+                     <h4 class="diabetes_text">Estética dental</h4>
+                  </div>
+                  <div class="icon_main">
+                     <div class="icon_7"><img src="images/impla-4.png" style="width: 69px;"></div>
+                     <h4 class="diabetes_text">Prótesis</h4>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="contact_box">
-                     <h1 class="book_text">Book Appoinment</h1>
+                     <h1 class="book_text">Reservar una cita</h1>
                      <input type="text" class="Email_text" placeholder="Name" name="Name">
                      <input type="text" class="Email_text" placeholder="Name" name="Name">
                      <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                     <div class="send_bt"><a href="#">SEND</a></div>
+                     <div class="send_bt"><a href="#">Enviar</a></div>
                   </div>
                </div>
             </div>
@@ -274,7 +278,8 @@
    </div>
    <!-- contact section end -->
    <!-- client section start -->
-   <div class="client_section layout_padding">
+
+   <!--<div class="client_section layout_padding">
       <div id="my_slider" class="carousel slide" data-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
@@ -333,31 +338,29 @@
             <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
          </a>
       </div>
-   </div>
+   </div> -->
    <!-- client section end -->
    <!-- footer section start -->
    <div class="footer_section layout_padding">
       <div class="container">
          <div class="row">
             <div class="col-lg-3 col-sm-6">
-               <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
-               <h1 class="adderss_text">Contact Us</h1>
-               <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
-               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
-               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
+               <h1 class="adderss_text">Contáctanos</h1>
+               <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Ubicación</span></div>
+               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">656881748</span></div>
+               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_10">ClinicaCarrillo@gmail.com</span></div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Doctors</h1>
-               <div class="hiphop_text_1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</div>
+               <h1 class="adderss_text">Certificados</h1>
+               <div class="hiphop_text_1">Pensando en todas las personas y familias que buscan una clínica de confianza, en Clinica Carrillo disponemos de un amplio equipo de profesionales sanitarios a su disposición que le atenderán de forma personalizada y sin desplazamientos.</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Useful Links</h1>
-               <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered ,</div>
+               <h1 class="adderss_text">Horarios</h1>
+               <div class="Useful_text">Abrimos de lunes a viernes con un horario adaptado a nuestros pacientes.</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Newsletter</h1>
-               <input type="text" class="Enter_text" placeholder="Enter your Emil" name="Enter your Emil">
-               <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+               <h1 class="adderss_text">Noticiero</h1>
+               <div class="subscribe_bt"><a href="#">Subscribirse</a></div>
                <div class="social_icon">
                   <ul>
                      <li><a href="#"><img src="images/fb-icon.png"></a></li>
@@ -374,7 +377,7 @@
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <p class="copyright_text">2019 All Rights Reserved. Design by <a href="https://html.design">Free html Templates</a></p>
+         <p class="copyright_text">© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad</a></p>
       </div>
    </div>
    <!-- copyright section end -->
