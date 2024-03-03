@@ -47,7 +47,7 @@
       <div class="header_section">
       <div class="header_section">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="logo"><a href="index.html"><img src="../images/logo.png"></a></div>
+    <div class="logo" style = "display: block; text-align: center; margin-left: -160px;"><a href="{{ url('home') }}"  ><img src="../images/iconoPrincipal.png" style="width: 150px "><h1 style =" color: #3ba9d7;">Clínica Carrillo</h1></a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -66,7 +66,7 @@
                     <a class="nav-link" href="{{ url('principal/news') }}">Nuevo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/contact') }}">Contactos</a>
+                    <a class="nav-link" href="{{ url('principal/contact') }}">Servicios</a>
                 </li>
                 <!-- menu admin -->
                @role('administrador')
@@ -76,13 +76,14 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                      <a class="dropdown-item" href="{{ route('products.index') }}">{{ __('Productos') }}</a>
+                     <a class="dropdown-item" href="{{ route('merchandisings.index') }}">{{ __('Merchandising') }}</a>
                   </div>
                </li>
                @endrole
                 <!--boton cuenta-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cuenta
+                    {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ url('principal/client') }}">Mi perfil</a>
@@ -104,62 +105,60 @@
       </div>
       <!-- header section end -->
       <!-- knowledge section end -->
-      <div class="knowledge_section layout_padding margin_90">
-         <div class="container">
-            <div class="knowledge_main">
-               <div class="left_main">
-                  <h1 class="knowledge_taital">Knowledge of center</h1>
-                  <p class="knowledge_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-               </div>
-               <div class="right_main">
-                  <div class="play_icon"><a href="#"><img src="../images/play-icon.png"></a></div>
-               </div>
+      <div class="knowledge_section layout_padding">
+      <div class="container">
+         <div class="knowledge_main">
+            <div class="left_main">
+               <h1 class="knowledge_taital">Sobre nosotros</h1>
+               <p class="knowledge_text">Somos la clínica dental de referencia, con un equipo humano dirigido por los mejores profesionales del sector. Con amplias y modernas instalaciones, dotadas de las últimas tecnologías que nos permitan ofrecer el mejor cuidado para una salud bucodental de calidad. Nuestra apuesta por la innovación nos ha hecho incorporar tratamientos muy novedosos como el uso de Plasma Rico en Plaquetas, un tratamiento fundamental para la cicatrización y regeneración de tejidos.</p>
+            </div>
+            <div class="right_main">
+               <div class="play_icon"><a href="#"><img src="../images/play-icon.png"></a></div>
             </div>
          </div>
       </div>
+   </div>
       <!-- knowledge section end -->
       <!-- footer section start -->
       <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-3 col-sm-6">
-                  <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
-                  <h1 class="adderss_text">Contact Us</h1>
-                  <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">Page when looking at its</span></div>
-                  <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
-                  <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_0">volim@gmail.com</span></div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="adderss_text">Doctors</h1>
-                  <div class="hiphop_text_1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="adderss_text">Useful Links</h1>
-                  <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered ,</div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="adderss_text">Newsletter</h1>
-                  <input type="text" class="Enter_text" placeholder="Enter your Emil" name="Enter your Emil">
-                  <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-                  <div class="social_icon">
-                     <ul>
-                        <li><a href="#"><img src="../images/fb-icon.png"></a></li>
-                        <li><a href="#"><img src="../images/twitter-icon.png"></a></li>
-                        <li><a href="#"><img src="../images/linkedin-icon.png"></a></li>
-                        <li><a href="#"><img src="../images/instagram-icon.png"></a></li>
-                     </ul>
-                  </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text">Contáctanos</h1>
+               <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">Ubicación</span></div>
+               <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">656881748</span></div>
+               <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_10">ClinicaCarrillo@gmail.com</span></div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text">Certificados</h1>
+               <div class="hiphop_text_1">Pensando en todas las personas y familias que buscan una clínica de confianza, en Clinica Carrillo disponemos de un amplio equipo de profesionales sanitarios a su disposición que le atenderán de forma personalizada y sin desplazamientos.</div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text">Horarios</h1>
+               <div class="Useful_text">Abrimos de lunes a viernes con un horario adaptado a nuestros pacientes.</div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text">Noticiero</h1>
+               <div class="subscribe_bt"><a href="#">Subscribirse</a></div>
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><img src="../images/fb-icon.png"></a></li>
+                     <li><a href="#"><img src="../images/twitter-icon.png"></a></li>
+                     <li><a href="#"><img src="../images/linkedin-icon.png"></a></li>
+                     <li><a href="#"><img src="../images/instagram-icon.png"></a></li>
+                  </ul>
                </div>
             </div>
          </div>
       </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">2019 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
-         </div>
+   </div>
+   <!-- footer section end -->
+   <!-- copyright section start -->
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad</a></p>
       </div>
+   </div>
       <!-- copyright section end -->
       <!-- Javascript files-->
       
