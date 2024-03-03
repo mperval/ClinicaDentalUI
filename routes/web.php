@@ -21,36 +21,40 @@ use App\Http\Controllers\MerchandisingController;
 // iniciar de primera el Login
 Route::redirect('/', '/login');
 
-//Primer modelo.
-Route::resource('products', ProductController::class);
-Route::resource('products.index', ProductController::class);
+// Rutas que requieren autenticación
+Route::middleware(['auth'])->group(function () {
+    // Primer modelo.
+    Route::resource('products', ProductController::class);
+    Route::resource('products.index', ProductController::class);
 
-//segundo modelo
-Route::resource('merchandisings', MerchandisingController::class);
-Route::resource('merchandisings.index', MerchandisingController::class);
+    // Segundo modelo
+    Route::resource('merchandisings', MerchandisingController::class);
+    Route::resource('merchandisings.index', MerchandisingController::class);
 
-Route::get('/principal/health', function () {
-    return view('principal.health');
-});
+    // Otras rutas que requieren autenticación
+    Route::get('/principal/health', function () {
+        return view('principal.health');
+    });
 
-Route::get('/principal/client', function () {
-    return view('principal.client');
-});
+    Route::get('/principal/client', function () {
+        return view('principal.client');
+    });
 
-Route::get('/principal/contact', function () {
-    return view('principal.contact');
-});
+    Route::get('/principal/contact', function () {
+        return view('principal.contact');
+    });
 
-Route::get('/principal/index', function () {
-    return view('principal.index');
-});
+    Route::get('/principal/index', function () {
+        return view('principal.index');
+    });
 
-Route::get('/principal/medicine', function () {
-    return view('principal.medicine');
-});
+    Route::get('/principal/medicine', function () {
+        return view('principal.medicine');
+    });
 
-Route::get('/principal/news', function () {
-    return view('principal.news');
+    Route::get('/principal/news', function () {
+        return view('principal.news');
+    });
 });
 
 Auth::routes();
