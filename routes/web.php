@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MerchandisingController;
+use App\Http\Controllers\InstrumentoController;
+use App\Models\Instrumento;
 use Spatie\Permission\Middleware\RoleMiddleware;
 
 /*
@@ -31,6 +33,10 @@ Route::middleware(['auth', RoleMiddleware::using('administrador')])->group(funct
     // Segundo modelo
     Route::resource('merchandisings', MerchandisingController::class);
     Route::resource('merchandisings.index', MerchandisingController::class);
+
+    //Tercer modelo
+    Route::resource('instrumentos', InstrumentoController::class);
+    Route::resource('instrumentos.index', InstrumentoController::class);
 
 });
 
