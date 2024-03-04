@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MerchandisingController;
+use Spatie\Permission\Middleware\RoleMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ use App\Http\Controllers\MerchandisingController;
 Route::redirect('/', '/login');
 
 // Rutas que requieren autenticación
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', RoleMiddleware::using('administrador')])->group(function () {
     // Primer modelo.
     Route::resource('products', ProductController::class);
     Route::resource('products.index', ProductController::class);
@@ -31,8 +32,12 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('merchandisings', MerchandisingController::class);
     Route::resource('merchandisings.index', MerchandisingController::class);
 
-    // Otras rutas que requieren autenticación
-    Route::get('/principal/health', function () {
+});
+
+Route::middleware(['auth'])->group(function () {
+
+     // Otras rutas que requieren autenticación
+     Route::get('/principal/health', function () {
         return view('principal.health');
     });
 
@@ -55,6 +60,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/principal/news', function () {
         return view('principal.news');
     });
+    
 });
 
 Auth::routes();
