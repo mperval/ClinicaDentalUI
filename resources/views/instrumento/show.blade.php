@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.navbar2')
 
 @section('template_title')
     {{ $instrumento->name ?? "{{ __('Show') Instrumento" }}
@@ -37,5 +37,8 @@
                 </div>
             </div>
         </div>
+        <div class="text-center">
+        <a class="btn btn-primary" href="{{ route('instrumentos.index') }}"> {{ __('Back') }}</a>
+    </div>
     </section>
 @endsection
