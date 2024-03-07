@@ -15,13 +15,19 @@ class UserSeeder extends Seeder
     {
         //
         // Crear un usuario
-        $user = User::factory()->create([
-            'name' => 'useradmin',
-            'email' => 'useradmin@useradmin.com',
+        $userAdmin = User::factory()->create([
+            'name' => 'UserAdmin',
+            'email' => 'admin@admin.com',
+            'password' => bcrypt('1234'),
+        ]);
+        $userBasic = User::factory()->create([
+            'name' => 'UserUser',
+            'email' => 'user@user.com',
             'password' => bcrypt('1234'),
         ]);
 
         // Asigno rol
-        $user->assignRole('administrador');
+        $userAdmin->assignRole('administrador');
+        $userBasic->assignRole('user');
     }
 }
