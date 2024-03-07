@@ -33,12 +33,12 @@
       <div class="header_section">
         @include('layouts.navbar')
       </div>
-      <!-- header section end -->
+      <!-- header section end  {{ __('') }}-->
       <!-- health section start -->
       <div class="health_section layout_padding">
       <div class="container">
-         <h1 class="health_taital">Los mejores cuidados para sus dientes</h1>
-         <p class="health_text">Damos la bienvenida a nuestros pacientes a un ambiente relajado y respetuoso, donde podrán recibir una atención integral de calidad por parte de nuestro equipo altamente capacitado.</p>
+         <h1 class="health_taital">{{ __('Los mejores cuidados para sus dientes') }}</h1>
+         <p class="health_text">{{ __('Damos la bienvenida a nuestros pacientes a un ambiente relajado y respetuoso, donde podrán recibir una atención integral de calidad por parte de nuestro equipo altamente capacitado.') }}</p>
          <div class="health_section layout_padding">
             <div class="row">
                <div class="col-sm-7">
