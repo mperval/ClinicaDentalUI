@@ -1,7 +1,9 @@
 <?php
 
+use Database\Seeders\UserSeeder;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -20,6 +22,9 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        // Llamar al seeder dentro de la migración
+        //Artisan::call('db:seed', ['--class' => UserSeeder::class]);
     }
 
     /**
