@@ -96,6 +96,15 @@
                         </form>
                     </div>
                 </li>
+                <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                     {{ __("Idiomas") }}
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="{{route('set_language', ['es'])}}">{{ __("Ingles") }}</a>
+                     <a class="dropdown-item" href="{{route('set_language', ['en'])}}">{{ __("Español") }}</a>
+                  </div>
+               </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><img src="../images/search-icon.png"></a>
                 </li>

@@ -30,6 +30,7 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                      <a class="dropdown-item" href="{{ route('products.index') }}">{{ __('Productos') }}</a>
                      <a class="dropdown-item" href="{{ route('merchandisings.index') }}">{{ __('Merchandising') }}</a>
+                     <a class="dropdown-item" href="{{ route('instrumentos.index') }}">{{ __('Instrumentos Dentales') }}</a>
                   </div>
                </li>
                @endrole
@@ -39,7 +40,7 @@
                     {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url('/principal/client') }}">Mi perfil</a>
+                        <a class="dropdown-item" href="{{ url('/principal/client') }}">{{ __('Mi perfil') }}</a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             {{ __('Cerrar Sesión') }}
@@ -49,6 +50,15 @@
                         </form>
                     </div>
                 </li>
+                <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                     {{ __("Idiomas") }}
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="{{route('set_language', ['es'])}}">{{ __("Ingles") }}</a>
+                     <a class="dropdown-item" href="{{route('set_language', ['en'])}}">{{ __("Español") }}</a>
+                  </div>
+               </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><img src="../images/search-icon.png"></a>
                 </li>
@@ -65,7 +75,7 @@
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Health <br><span style="color: #151515;">Care</span></h1>
-                           <p class="banner_text">¡Bienvenidos a la Clínica Dental Carrillo!</p>
+                           <p class="banner_text">{{ __('¡Bienvenidos a la Clínica Dental Carrillo!') }}</p>
                            <div class="btn_main">
                               <div class="more_bt"><a href="{{ url('/principal/contact') }}">Contáctanos</a></div>
                               <div class="contact_bt"><a href="#">Get A Quote</a></div>
