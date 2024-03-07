@@ -19,19 +19,19 @@
                 <div class="card-body">
 
                     <div class="form-group">
-                        <strong>Nombre:</strong>
+                        <strong>{{ __('Nombre') }}:</strong>
                         {{ $product->nombre }}
                     </div>
                     <div class="form-group">
-                        <strong>Descripcion:</strong>
+                        <strong>{{ __('Descripción') }}:</strong>
                         {{ $product->descripcion }}
                     </div>
                     <div class="form-group">
-                        <strong>Precio:</strong>
+                        <strong>{{ __('Precio') }}:</strong>
                         {{ $product->precio }}
                     </div>
                     <div class="form-group">
-                        <strong>Stock:</strong>
+                        <strong>{{ __('Stock') }}:</strong>
                         {{ $product->stock }}
                     </div>
 
@@ -41,6 +41,6 @@
     </div>
 </section>
 <div class="text-center">
-        <a class="btn btn-primary" href="{{ route('products.index') }}"> {{ __('Back') }}</a>
+        <a class="btn btn-primary" href="{{ route('products.index') }}"> {{ __('Atrás') }}</a>
     </div>
 @endsection

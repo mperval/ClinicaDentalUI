@@ -39,25 +39,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('home') }}">Inicio</a>
+                    <a class="nav-link" href="{{ url('home') }}">{{ __('Inicio') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/health') }}">Salud</a>
+                    <a class="nav-link" href="{{ url('principal/health') }}">{{ __('Salud') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/medicine') }}">Medicina</a>
+                    <a class="nav-link" href="{{ url('principal/medicine') }}">{{ __('Medicina') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/news') }}">Nuevo</a>
+                    <a class="nav-link" href="{{ url('principal/news') }}">{{ __('Nuevo') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/contact') }}">Servicios</a>
+                    <a class="nav-link" href="{{ url('principal/contact') }}">{{ __('Servicios') }}</a>
                 </li>
                 <!-- menu admin -->
                @role('administrador')
                <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Admin
+               {{ __('Admin') }}
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                      <a class="dropdown-item" href="{{ route('products.index') }}">{{ __('Productos') }}</a>
@@ -73,7 +73,6 @@
                     {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url('principal/client') }}">Mi perfil</a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             {{ __('Cerrar Sesión') }}
@@ -103,31 +102,31 @@
       <!-- news section start -->
       <div class="news_section layout_padding">
       <div class="container">
-         <h1 class="health_taital">¿Por qué elegir Clínica Carrillo?</h1>
-         <p class="health_text">Trabajar y sufrir dolor, gran cosa. Porque por el trabajo duro se obtiene algo grande. Para alcanzar una vida mínimamente satisfactoria.</p>
+         <h1 class="health_taital">{{ __('¿Por qué elegir Clínica Carrillo?') }}</h1>
+         <p class="health_text">{{ __('Trabajar y sufrir dolor, gran cosa. Porque por el trabajo duro se obtiene algo grande. Para alcanzar una vida mínimamente satisfactoria.') }}</p>
          <div class="news_section_2 layout_padding">
             <div class="row">
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main">
                      <div class="icon_1"><img src="../images/icon-2.png"></div>
-                     <h4 class="daily_text">Certificados Médicos</h4>
+                     <h4 class="daily_text">{{ __('Certificados Médicos') }}</h4>
                   </div>
                </div>
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main active">
                      <div class="icon_1"><img src="../images/icon-3.png"></div>
-                     <h4 class="daily_text_1">Lunes a Viernes con Horario adaptable</h4>
+                     <h4 class="daily_text_1">{{ __('Lunes a Viernes con Horario adaptable') }}</h4>
                   </div>
                </div>
                <div class="col-lg-4 col-sm-6">
                   <div class="box_main">
                      <div class="icon_1"><img src="../images/ic_botiquin.png" style="width: 150px;"></div>
-                     <h4 class="daily_text_1">Tratamientos</h4>
+                     <h4 class="daily_text_1">{{ __('Tratamientos') }}</h4>
                   </div>
                </div>
             </div>
          </div>
-         <div class="getquote_bt"><a href="#">Get A Quote <span><img src="../images/right-arrow.png"></span></a></div>
+         <div class="getquote_bt"><a href="#">{{ __('Get A Quote') }} <span><img src="../images/right-arrow.png"></span></a></div>
       </div>
    </div>
       <!-- news section end -->
@@ -136,22 +135,22 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Contáctanos</h1>
-               <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">Ubicación</span></div>
-               <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">656881748</span></div>
-               <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_10">ClinicaCarrillo@gmail.com</span></div>
+               <h1 class="adderss_text">{{ __('Contáctanos') }}</h1>
+               <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">{{ __('Ubicación') }}</span></div>
+               <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">{{ __('656881748') }}</span></div>
+               <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_10">{{ __('ClinicaCarrillo@gmail.com') }}</span></div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Certificados</h1>
-               <div class="hiphop_text_1">Pensando en todas las personas y familias que buscan una clínica de confianza, en Clinica Carrillo disponemos de un amplio equipo de profesionales sanitarios a su disposición que le atenderán de forma personalizada y sin desplazamientos.</div>
+               <h1 class="adderss_text">{{ __('Certificados') }}</h1>
+               <div class="hiphop_text_1">{{ __('Pensando en todas las personas y familias que buscan una clínica de confianza, en Clinica Carrillo disponemos de un amplio equipo de profesionales sanitarios a su disposición que le atenderán de forma personalizada y sin desplazamientos.') }}</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Horarios</h1>
-               <div class="Useful_text">Abrimos de lunes a viernes con un horario adaptado a nuestros pacientes.</div>
+               <h1 class="adderss_text">{{ __('Horarios') }}</h1>
+               <div class="Useful_text">{{ __('Abrimos de lunes a viernes con un horario adaptado a nuestros pacientes.') }}</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Noticiero</h1>
-               <div class="subscribe_bt"><a href="#">Subscribirse</a></div>
+               <h1 class="adderss_text">{{ __('Noticiero') }}</h1>
+               <div class="subscribe_bt"><a href="#">{{ __('Subscribirse') }}</a></div>
                <div class="social_icon">
                   <ul>
                      <li><a href="#"><img src="../images/fb-icon.png"></a></li>
@@ -168,7 +167,7 @@
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <p class="copyright_text">© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad</a></p>
+         <p class="copyright_text">{{ __('© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad') }}</a></p>
       </div>
    </div>
       <!-- copyright section end -->

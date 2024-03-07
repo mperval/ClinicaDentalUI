@@ -53,19 +53,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('home') }}">Inicio</a>
+                    <a class="nav-link" href="{{ url('home') }}">{{ __('Inicio') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/health') }}">Salud</a>
+                    <a class="nav-link" href="{{ url('principal/health') }}">{{ __('Salud') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/medicine') }}">Medicina</a>
+                    <a class="nav-link" href="{{ url('principal/medicine') }}">{{ __('Medicina') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/news') }}">Nuevo</a>
+                    <a class="nav-link" href="{{ url('principal/news') }}">{{ __('Nuevo') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('principal/contact') }}">Servicios</a>
+                    <a class="nav-link" href="{{ url('principal/contact') }}">{{ __('Servicios') }}</a>
                 </li>
                 <!-- menu admin -->
                @role('administrador')
@@ -86,7 +86,6 @@
                     {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url('principal/client') }}">Mi perfil</a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             {{ __('Cerrar Sesión') }}
@@ -116,34 +115,34 @@
       <!-- contact section start -->
       <div class="contact_section layout_padding">
       <div class="container">
-         <h1 class="contact_taital">Nuestros tratamientos</h1>
+         <h1 class="contact_taital">{{ __('Nuestros tratamientos') }}</h1>
          <div class="news_section_2">
             <div class="row">
                <div class="col-md-6">
                   <div class="icon_main">
                      <div class="icon_7"><img src="../images/impla-1.png" style="width: 69px;"></div>
-                     <h4 class="diabetes_text">Implantología </h4>
+                     <h4 class="diabetes_text">{{ __('Implantología') }} </h4>
                   </div>
                   <div class="icon_main">
                      <div class="icon_7"><img src="../images/impla-2.png" style="width: 69px;"></div>
-                     <h4 class="diabetes_text">Ortodoncia</h4>
+                     <h4 class="diabetes_text">{{ __('Ortodoncia') }}</h4>
                   </div>
                   <div class="icon_main">
                      <div class="icon_7"><img src="../images/impla-3.png" style="width: 69px;"></div>
-                     <h4 class="diabetes_text">Estética dental</h4>
+                     <h4 class="diabetes_text">{{ __('Estética dental') }}</h4>
                   </div>
                   <div class="icon_main">
                      <div class="icon_7"><img src="../images/impla-4.png" style="width: 69px;"></div>
-                     <h4 class="diabetes_text">Prótesis</h4>
+                     <h4 class="diabetes_text">{{ __('Prótesis') }}</h4>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="contact_box">
-                     <h1 class="book_text">Reservar una cita</h1>
+                     <h1 class="book_text">{{ __('Reservar una cita') }}</h1>
                      <input type="text" class="Email_text" placeholder="Name" name="Name">
                      <input type="text" class="Email_text" placeholder="Name" name="Name">
                      <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                     <div class="send_bt"><a href="#">Enviar</a></div>
+                     <div class="send_bt"><a href="#">{{ __('Enviar') }}</a></div>
                   </div>
                </div>
             </div>
@@ -156,22 +155,22 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Contáctanos</h1>
-               <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">Ubicación</span></div>
-               <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">656881748</span></div>
-               <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_10">ClinicaCarrillo@gmail.com</span></div>
+               <h1 class="adderss_text">{{ __('Contáctanos') }}</h1>
+               <div class="map_icon"><img src="../images/map-icon.png"><span class="paddlin_left_0">{{ __('Ubicación') }}</span></div>
+               <div class="map_icon"><img src="../images/call-icon.png"><span class="paddlin_left_0">{{ __('656881748') }}</span></div>
+               <div class="map_icon"><img src="../images/mail-icon.png"><span class="paddlin_left_10">{{ __('ClinicaCarrillo@gmail.com') }}</span></div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Certificados</h1>
-               <div class="hiphop_text_1">Pensando en todas las personas y familias que buscan una clínica de confianza, en Clinica Carrillo disponemos de un amplio equipo de profesionales sanitarios a su disposición que le atenderán de forma personalizada y sin desplazamientos.</div>
+               <h1 class="adderss_text">{{ __('Certificados') }}</h1>
+               <div class="hiphop_text_1">{{ __('Pensando en todas las personas y familias que buscan una clínica de confianza, en Clinica Carrillo disponemos de un amplio equipo de profesionales sanitarios a su disposición que le atenderán de forma personalizada y sin desplazamientos.') }}</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Horarios</h1>
-               <div class="Useful_text">Abrimos de lunes a viernes con un horario adaptado a nuestros pacientes.</div>
+               <h1 class="adderss_text">{{ __('Horarios') }}</h1>
+               <div class="Useful_text">{{ __('Abrimos de lunes a viernes con un horario adaptado a nuestros pacientes.') }}</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               <h1 class="adderss_text">Noticiero</h1>
-               <div class="subscribe_bt"><a href="#">Subscribirse</a></div>
+               <h1 class="adderss_text">{{ __('Noticiero') }}</h1>
+               <div class="subscribe_bt"><a href="#">{{ __('Subscribirse') }}</a></div>
                <div class="social_icon">
                   <ul>
                      <li><a href="#"><img src="../images/fb-icon.png"></a></li>
@@ -188,7 +187,7 @@
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <p class="copyright_text">© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad</a></p>
+         <p class="copyright_text">{{ __('© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad') }}</a></p>
       </div>
    </div>
       <!-- copyright section end -->

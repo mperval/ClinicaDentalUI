@@ -358,9 +358,9 @@
          <div class="row">
             <div class="col-lg-3 col-sm-6">
                <h1 class="adderss_text">{{ __('Contáctanos') }}</h1>
-               <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Ubicación</span></div>
-               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">656881748</span></div>
-               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_10">ClinicaCarrillo@gmail.com</span></div>
+               <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">{{ __('Ubicación') }}</span></div>
+               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">{{ __('656881748') }}</span></div>
+               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_10">{{ __('ClinicaCarrillo@gmail.com') }}</span></div>
             </div>
             <div class="col-lg-3 col-sm-6">
                <h1 class="adderss_text">{{ __('Certificados') }}</h1>
@@ -389,7 +389,7 @@
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <p class="copyright_text">© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad</a></p>
+         <p class="copyright_text">{{ __('© 2024. Todos los derechos reservados por Aviso Legal | Política de privacidad') }}</a></p>
       </div>
    </div>
    <!-- copyright section end -->

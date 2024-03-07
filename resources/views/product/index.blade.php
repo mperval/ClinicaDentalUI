@@ -36,10 +36,10 @@ Product
                                 <tr>
                                     <th>No</th>
 
-                                    <th>Nombre</th>
-                                    <th>Descripcion</th>
-                                    <th>Precio</th>
-                                    <th>Stock</th>
+                                    <th>{{ __('Nombre') }}</th>
+                                    <th>{{ __('Descripción') }}</th>
+                                    <th>{{ __('Precio') }}</th>
+                                    <th>{{ __('Stock') }}</th>
 
                                     <th></th>
                                 </tr>
@@ -71,7 +71,7 @@ Product
                 </div>
             </div>
             <div class="text-center">
-                <a class="btn btn-primary" href="{{ route('home') }}"> {{ __('Back') }}</a>
+                <a class="btn btn-primary" href="{{ route('home') }}"> {{ __('Atrás') }}</a>
             </div>
             {!! $products->links() !!}
         </div>

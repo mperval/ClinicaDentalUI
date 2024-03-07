@@ -36,9 +36,9 @@ Instrumento
                                 <tr>
                                     <th>No</th>
 
-                                    <th>Nombre</th>
-                                    <th>Material</th>
-                                    <th>Tamano</th>
+                                    <th>{{ __('Nombre') }}</th>
+                                    <th>{{ __('Material') }}</th>
+                                    <th>{{ __('Tamaño') }}</th>
 
                                     <th></th>
                                 </tr>
@@ -69,7 +69,7 @@ Instrumento
                 </div>
             </div>
             <div class="text-center">
-                <a class="btn btn-primary" href="{{ route('home') }}"> {{ __('Back') }}</a>
+                <a class="btn btn-primary" href="{{ route('home') }}"> {{ __('Atrás') }}</a>
             </div>
             {!! $instrumentos->links() !!}
         </div>

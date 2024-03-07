@@ -36,9 +36,9 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Tipo Producto</th>
-										<th>Talla</th>
-										<th>Precio</th>
+										<th>{{ __('Tipo producto') }}</th>
+										<th>{{ __('Talla') }}</th>
+										<th>{{ __('Precio') }}</th>
 
                                         <th></th>
                                     </tr>

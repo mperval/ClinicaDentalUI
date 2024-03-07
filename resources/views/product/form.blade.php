@@ -27,6 +27,6 @@
         <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
     </div>
     <div class="text-center">
-        <a class="btn btn-primary" href="{{ route('products.index') }}"> {{ __('Back') }}</a>
+        <a class="btn btn-primary" href="{{ route('products.index') }}"> {{ __('Atrás') }}</a>
     </div>
 </div>
