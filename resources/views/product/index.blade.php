@@ -18,7 +18,7 @@ Product
 
                         <div class="float-right">
                             <a href="{{ route('products.create') }}" class="btn btn-primary btn-sm float-right" data-placement="left">
-                                {{ __('Crear producto') }}
+                                {{ __('Crear  nuevo producto') }}
                             </a>
                         </div>
                     </div>
