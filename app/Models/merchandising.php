@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Merchandising
  *
@@ -19,10 +19,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Merchandising extends Model
 {
-    
+  use HasFactory;
     static $rules = [
       'tipo_producto' => 'required|string|max:255',
-      'talla' => 'required|string|max:50',
+      'talla' => 'required|numeric|max:50',
       'precio' => 'required|numeric|min:0',
     ];
 

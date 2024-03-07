@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Instrumento
@@ -19,7 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Instrumento extends Model
 {
-    
+  use HasFactory;
     static $rules = [
 		'nombre' => 'required|string',
 		'material' => 'required|string',
