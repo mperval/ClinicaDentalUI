@@ -40,7 +40,7 @@
                     {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url('/principal/client') }}">Mi perfil</a>
+                        <a class="dropdown-item" href="{{ url('/principal/client') }}">{{ __('Mi perfil') }}</a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             {{ __('Cerrar Sesión') }}
@@ -75,7 +75,7 @@
                      <div class="row">
                         <div class="col-md-6">
                            <h1 class="banner_taital">Health <br><span style="color: #151515;">Care</span></h1>
-                           <p class="banner_text">¡Bienvenidos a la Clínica Dental Carrillo!</p>
+                           <p class="banner_text">{{ __('¡Bienvenidos a la Clínica Dental Carrillo!') }}</p>
                            <div class="btn_main">
                               <div class="more_bt"><a href="{{ url('/principal/contact') }}">Contáctanos</a></div>
                               <div class="contact_bt"><a href="#">Get A Quote</a></div>
