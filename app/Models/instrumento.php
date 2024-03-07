@@ -21,9 +21,9 @@ class Instrumento extends Model
 {
     
     static $rules = [
-		'nombre' => 'required',
-		'material' => 'required',
-		'tamano' => 'required',
+		'nombre' => 'required|string',
+		'material' => 'required|string',
+		'tamano' => 'required|numeric|min:1',
     ];
 
     protected $perPage = 20;

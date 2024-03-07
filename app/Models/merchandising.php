@@ -21,9 +21,9 @@ class Merchandising extends Model
 {
     
     static $rules = [
-		'tipo_producto' => 'required',
-		'talla' => 'required',
-		'precio' => 'required',
+      'tipo_producto' => 'required|string|max:255',
+      'talla' => 'required|string|max:50',
+      'precio' => 'required|numeric|min:0',
     ];
 
     protected $perPage = 20;

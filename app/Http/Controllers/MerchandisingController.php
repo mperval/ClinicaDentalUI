@@ -42,14 +42,18 @@ class MerchandisingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        request()->validate(Merchandising::$rules);
+{
+    $validatedData = $request->validate([
+        'tipo_producto' => 'required',
+        'talla' => 'required|string|max:50',
+        'precio' => 'required|numeric|min:1',
+    ]);
 
-        $merchandising = Merchandising::create($request->all());
+    $merchandising = Merchandising::create($validatedData);
 
-        return redirect()->route('merchandisings.index')
-            ->with('success', 'Merchandising created successfully.');
-    }
+    return redirect()->route('merchandisings.index')
+        ->with('success', 'Merchandising created successfully.');
+}
 
     /**
      * Display the specified resource.
@@ -85,14 +89,18 @@ class MerchandisingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Merchandising $merchandising)
-    {
-        request()->validate(Merchandising::$rules);
+{
+    $validatedData = $request->validate([
+        'tipo_producto' => 'required|string|max:255',
+        'talla' => 'required|string|max:50',
+        'precio' => 'required|numeric|min:0',
+    ]);
 
-        $merchandising->update($request->all());
+    $merchandising->update($validatedData);
 
-        return redirect()->route('merchandisings.index')
-            ->with('success', 'Merchandising updated successfully');
-    }
+    return redirect()->route('merchandisings.index')
+        ->with('success', 'Merchandising updated successfully');
+}
 
     /**
      * @param int $id
